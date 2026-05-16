@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="radio"] {}
+
+        input[type="radio"]:checked+a {
+            color: red;
+            transform: scale(1.1);
+        }
+
+        a {
+            transition: color 1s ease, transform 1s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            text-decoration: none;
+            display: inline-block;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="radio" name="spol" id=""> <a href=""> Muško</a>
+        <input type="radio" name="spol" id=""> <a href=""> Žena</a>
+        <input type="radio" name="spol" id=""> <a href=""> Ostalo</a>
+    </div>
+</body>
+
+</html>
