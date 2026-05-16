@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            width: 150px;
+            height: 40px;
+            background: url(arrow-right.png);
+            background-repeat: no-repeat;
+            background-position: 12px;
+            background-size: 4px;
+            background-color: darkblue;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+        }
+
+        ul li:hover {
+            width: 150px;
+            height: 40px;
+            background: url(arrow-down.png);
+            background-repeat: no-repeat;
+            background-position: 12px;
+            background-size: 6px;
+            background-color: lightblue;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        ul li ul {
+            display: none;
+        }
+
+        ul li:hover ul {
+            display: block;
+            position: absolute;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            width: 100%;
+            display: block;
+        }
+
+        ul li ul li {
+            background-image: none;
+        }
+
+        ul li ul li:hover {
+            background-image: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="">cro</a>
+                <ul>
+                    <li><a href="">zg</a></li>
+                    <li><a href="">ri</a></li>
+                    <li><a href="">st</a></li>
+                </ul>
+            </li>
+            <li><a href="">slo</a>
+                <ul>
+                    <li><a href="">ljub</a></li>
+                    <li><a href="">mar</a></li>
+                    <li><a href="">koper</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
