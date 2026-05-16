@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 30px;
+            margin: 0;
+        }
+
+        .box {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .dodatne_opcije {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0 15px;
+            margin-top: 0;
+            background-color: lightgray;
+            transition: max-height 0.5s ease,
+                opacity 0.5s ease,
+                margin-top 0.5s ease,
+                padding 0.5s ease;
+            /* transition: all 0.5s ease; */
+
+        }
+
+        #obavijesti:checked~.dodatne_opcije {
+            max-height: 400px;
+            opacity: 1;
+            margin-top: 15px;
+            padding: 15px;
+        }
+
+        p {
+            color: #666;
+            margin-left: 20px;
+            font-weight: normal;
+
+            transition: color 0.3s ease,
+                font-weight 0.3s ease,
+                transform 0.3s ease;
+
+        }
+
+        input[name="dodatne"]:checked+label+p {
+            color: red;
+            font-weight: bold;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>postavke obavijesti</h1>
+        <input type="checkbox" name="" id="obavijesti">
+        <label for="obavijesti">Želim primati obavijesti</label>
+        <div class="dodatne_opcije">
+            <h3>odaberite vrstu obavijesti</h3>
+
+            <input type="checkbox" name="dodatne" id="">
+            <label for="email">email obavijesti</label>
+            <p>email obavijesti su uključene</p>
+
+            <input type="checkbox" name="dodatne" id="">
+            <label for="sms">sms</label>
+            <p>sms obavijesti su uključene</p>
+
+
+            <input type="checkbox" name="dodatne" id="">
+            <label for="push">Push</label>
+            <p>push obavijesti su uključene</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
