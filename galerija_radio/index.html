@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --sirina: 640px;
+            --visina: 420px;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #eee;
+        }
+
+        #galerija {
+            width: var(--sirina);
+            position: relative;
+            overflow: hidden;
+            height: var(--visina);
+            border-radius: 10px;
+            background-color: darkgray;
+
+        }
+
+        #galerija input {
+            display: none;
+        }
+
+        .velika_slika {
+            position: absolute;
+            height: var(--visina);
+            width: var(--sirina);
+            object-fit: cover;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transform: scale(1.05);
+            transition: all 0.5s ease;
+
+        }
+
+        #dobra:checked+.velika_slika,
+        #gacka:checked+.velika_slika,
+        #korana:checked+.velika_slika,
+        #kupa:checked+.velika_slika,
+        #mreznica:checked+.velika_slika,
+        #una:checked+.velika_slika {
+            opacity: 1;
+            transform: scale(1);
+
+        }
+
+        .slicice {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .slicice label {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            border: 1px solid white;
+            opacity: 0.5;
+            transition: all 1s ease;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .slicice label img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .slicice label:hover {
+            opacity: 1;
+            border: 1px solid red;
+        }
+
+        label p {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="galerija">
+
+        <input type="radio" name="rijeke" id="dobra" checked>
+        <img class="velika_slika" src="slije/dobra.jpg" alt="Rijeka Dobra">
+
+        <input type="radio" name="rijeke" id="gacka">
+        <img class="velika_slika" src="slije/gacka.jpg" alt="Rijeka Gacka">
+
+        <input type="radio" name="rijeke" id="korana">
+        <img class="velika_slika" src="slije/korana.jpg" alt="Rijeka Korana">
+
+        <input type="radio" name="rijeke" id="kupa">
+        <img class="velika_slika" src="slije/kupa.jpg" alt="Rijeka Kupa">
+
+        <input type="radio" name="rijeke" id="mreznica">
+        <img class="velika_slika" src="slije/mreznica.jpg" alt="Rijeka Mrežnica">
+
+        <input type="radio" name="rijeke" id="una">
+        <img class="velika_slika" src="slije/una.jpg" alt="Rijeka Una">
+
+        <div class="slicice">
+            <label for="dobra">
+                <img src="slije/dobra.jpg" alt="">
+                <p>Dobra</p>
+            </label>
+            <label for="gacka">
+                <img src="slije/gacka.jpg" alt="">
+                <p>gacka</p>
+            </label>
+            <label for="korana">
+                <img src="slije/korana.jpg" alt="Korana">
+                <p>Korana</p>
+            </label>
+
+            <label for="kupa">
+                <img src="slije/kupa.jpg" alt="Kupa">
+                <p>Kupa</p>
+            </label>
+
+            <label for="mreznica">
+                <img src="slije/mreznica.jpg" alt="Mrežnica">
+                <p>Mrežnica</p>
+            </label>
+
+            <label for="una">
+                <img src="slije/una.jpg" alt="Una">
+                <p>Una</p>
+            </label>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
